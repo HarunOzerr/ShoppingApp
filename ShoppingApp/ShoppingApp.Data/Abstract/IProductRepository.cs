@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +20,5 @@ namespace ShoppingApp.Data.Abstract
         Task UpdateProductAsync(Product product, int[] selectedCategoryIds);
         Task UpdateIsHomeAsync(Product product);
         Task UpdateIsApprovedAsync(Product product);
-        Task<List<Product>> GetSearchResultsAsync(Expression<Func<Product, bool>> predicate);
     }
 }

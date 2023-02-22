@@ -32,14 +32,8 @@ namespace ShoppingApp.Data.Config
                 .IsRequired()
                 .HasMaxLength(250);
 
-            builder.Property(p => p.Price)
-                .IsRequired()
-                .HasColumnType("money");
-
             builder.Property(p => p.DateAdded)
-                .HasDefaultValueSql("getdate()");
-            /*.HasDefaultValueSql("date('now')")*/
-            ;//Sqlite
+                .HasDefaultValueSql("date('now')");//Sqlite
                                                    //.HasDefaultValueSql("getdate()"); (Bu sql server ile çalışırken kullanma şeklimiz)
 
             builder.ToTable("Products");

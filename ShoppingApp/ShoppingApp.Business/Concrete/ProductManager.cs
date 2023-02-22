@@ -4,7 +4,6 @@ using ShoppingApp.Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -92,11 +91,6 @@ namespace ShoppingApp.Business.Concrete
         public async Task UpdateIsApprovedAsync(Product product)
         {
             await _unitOfWork.Products.UpdateIsApprovedAsync(product);
-        }
-
-        public async Task<List<Product>> GetSearchResultsAsync(Expression<Func<Product, bool>> predicate)
-        {
-            return await _unitOfWork.Products.GetSearchResultsAsync(predicate);
         }
         #endregion
     }

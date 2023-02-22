@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingApp.Business.Abstract;
-using ShoppingApp.Business.Concrete;
 using ShoppingApp.Core;
 using ShoppingApp.Entity.Concrete;
 using ShoppingApp.Web.Areas.Admin.Models.Dtos;
-using ShoppingApp.Web.Models.Dtos;
 
 namespace ShoppingApp.Web.Areas.Admin.Controllers
 {
@@ -136,21 +134,6 @@ namespace ShoppingApp.Web.Areas.Admin.Controllers
             if (product==null) { return NotFound();}
             _productService.Delete(product);
             return RedirectToAction("Index");
-        }
-        public async Task<IActionResult> SearchProduct(SearchQueryDto searchQueryDto)
-        {
-            List<Product> searchResults = await _productService.GetSearchResultsAsync(p=>p.IsApproved);
-            List<ProductListDto> productDtos = new List<ProductListDto>();
-            foreach (var product in searchResults)
-            {
-                productDtos.Add(new ProductListDto
-                {
-                    Product = product
-                });
-            }
-            ViewBag.SelectedMenu = "Product";
-            ViewBag.Title = "Ürün Arama Sonuçları";
-            return View("Index",productDtos);
         }
     }
 }

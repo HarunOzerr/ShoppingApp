@@ -5,7 +5,6 @@ using ShoppingApp.Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,13 +12,13 @@ namespace ShoppingApp.Data.Concrete.EfCore.Repositories
 {
     public class EfCoreProductRepository : EfCoreGenericRepository<Product>, IProductRepository
     {
-        public EfCoreProductRepository(ShopAppContext context) : base(context)
+        public EfCoreProductRepository(ShopAppContext context):base(context)
         {
 
         }
         private ShopAppContext ShopAppContext
         {
-            get { return _context as ShopAppContext; }
+            get { return _context as ShopAppContext;  }
         }
 
         public async Task CreateProductAsync(Product product, int[] selectedCategoryIds)
@@ -57,13 +56,11 @@ namespace ShoppingApp.Data.Concrete.EfCore.Repositories
 
         public async Task<List<Product>> GetProductsByCategoryAsync(string category)
         {
-            var products = ShopAppContext
-                .Products
-                .Where(p => p.IsApproved)
-                .AsQueryable();
+            var products= ShopAppContext.Products.AsQueryable();
             if (category != null)
             {
                 products = products
+                    .Where(p => p.IsApproved)
                     .Include(p => p.ProductCategories)
                     .ThenInclude(pc => pc.Category)
                     .Where(p => p.ProductCategories.Any(pc => pc.Category.Url == category));
@@ -110,7 +107,7 @@ namespace ShoppingApp.Data.Concrete.EfCore.Repositories
         {
             Product newProduct = await ShopAppContext
                 .Products
-                .Include(p => p.ProductCategories)
+                .Include(p=> p.ProductCategories)
                 .FirstOrDefaultAsync(p => p.Id == product.Id);
             newProduct.ProductCategories = selectedCategoryIds
                 .Select(catId => new ProductCategory
@@ -120,12 +117,7 @@ namespace ShoppingApp.Data.Concrete.EfCore.Repositories
                 }).ToList();
             ShopAppContext.Update(newProduct);
             await ShopAppContext.SaveChangesAsync();
-
-        }
-
-        public async Task<List<Product>> GetSearchResultsAsync(Expression<Func<Product, bool>> predicate)
-        {
-            return null;   
+            
         }
     }
 }
