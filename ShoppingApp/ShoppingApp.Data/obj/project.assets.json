@@ -1458,11 +1458,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\harun\\Documents\\GitHub\\Dersler\\Week_12\\23-12-2022\\ShoppingApp\\ShoppingApp.Data\\ShoppingApp.Data.csproj",
+      "projectUniqueName": "C:\\Users\\harun\\Documents\\GitHub\\ShoppingApp\\ShoppingApp\\ShoppingApp.Data\\ShoppingApp.Data.csproj",
       "projectName": "ShoppingApp.Data",
-      "projectPath": "c:\\Users\\harun\\Documents\\GitHub\\Dersler\\Week_12\\23-12-2022\\ShoppingApp\\ShoppingApp.Data\\ShoppingApp.Data.csproj",
+      "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\ShoppingApp\\ShoppingApp\\ShoppingApp.Data\\ShoppingApp.Data.csproj",
       "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\harun\\Documents\\GitHub\\Dersler\\Week_12\\23-12-2022\\ShoppingApp\\ShoppingApp.Data\\obj\\",
+      "outputPath": "C:\\Users\\harun\\Documents\\GitHub\\ShoppingApp\\ShoppingApp\\ShoppingApp.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1479,8 +1479,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\harun\\Documents\\GitHub\\Dersler\\Week_12\\23-12-2022\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj": {
-              "projectPath": "c:\\Users\\harun\\Documents\\GitHub\\Dersler\\Week_12\\23-12-2022\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj"
+            "C:\\Users\\harun\\Documents\\GitHub\\ShoppingApp\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj": {
+              "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\ShoppingApp\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0kflJM3/K41lKNiPwX6ohEENgn68nXdGdO4SRu/i+1ycQFWh07kXhL6UcQJQ3b/V1L9Fdas4in/sGIG9uihDwA==",
+  "dgSpecHash": "UtpQgv1Zf9Y9tNii5qdrPXa7p8d2+jNyNh/H5Cl3kTTm7VfMIbFf81NqkwDVgu/2XrIsIJ39ey1bdmpR12qZNA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\harun\\Documents\\GitHub\\Dersler\\Week_12\\23-12-2022\\ShoppingApp\\ShoppingApp.Web\\ShoppingApp.Web.csproj",
+  "projectFilePath": "C:\\Users\\harun\\Documents\\GitHub\\ShoppingApp\\ShoppingApp\\ShoppingApp.Web\\ShoppingApp.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\harun\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\harun\\.nuget\\packages\\iyzipay\\2.1.53\\iyzipay.2.1.53.nupkg.sha512",
